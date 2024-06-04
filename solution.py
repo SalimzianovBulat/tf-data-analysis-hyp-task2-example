@@ -7,4 +7,4 @@ chat_id = 469801461 # Ваш chat ID, не меняйте название пе�
 def solution(x: np.array, y: np.array) -> bool:
     import scipy.stats as sps
     alpha = 0.05
-    return sps.ks_2samp(np.ones(3), np.zeros(3))[1] <= alpha # Ваш ответ, True или False
+    return sps.kstest(x, y)[1] <= alpha # Ваш ответ, True или False
